@@ -1,0 +1,20 @@
+name = "domain-monitor-worker"
+main = "./worker/dist/index.js"
+compatibility_date = "2025-12-10"
+
+[vars]
+PASSWORD = "change_me_please"
+DAYS = "30"
+SITENAME = "Domain Monitor"
+CRON_TOKEN = "change_me_cron_token"
+
+[[d1_databases]]
+binding = "DOMAINS_DB"
+database_name = "domain_monitor_db"
+database_id = "your-d1-database-id"
+
+[triggers]
+crons = ["0 1 * * *"]
+
+[build]
+command = "cd worker && npm install && npm run build"

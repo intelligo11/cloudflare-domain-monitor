@@ -1,0 +1,17 @@
+{
+  "name": "domain-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Domain Expiry Monitor",
+  "scripts": {
+    "dev:worker": "cd worker && npm run dev",
+    "dev:web": "cd web && npm run dev",
+    "build:worker": "cd worker && npm run build",
+    "build:web": "cd web && npm run build",
+    "build": "npm run build:worker && npm run build:web",
+    "deploy": "cd worker && npm run deploy"
+  },
+  "keywords": ["cloudflare", "domain", "monitor", "expiry"],
+  "author": "",
+  "license": "MIT"
+}
